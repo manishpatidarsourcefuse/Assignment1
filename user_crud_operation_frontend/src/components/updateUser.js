@@ -39,7 +39,7 @@ const UpdateUser = () => {
     const loadUserData = async (userId) =>{
         let response = await getUserById(userId);
         if(response.status === 200) {
-            setUser(response.data);
+            setUser(response.data.user);
         }else {
             setOpen(true)
             setMessage("User is not exist in list")
